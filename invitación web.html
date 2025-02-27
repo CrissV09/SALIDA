@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación al Teatro</title>
+    <style>
+        .hearts {
+            position: absolute;
+            width: 500%;
+            height: 500%;
+            top: 100;
+            left: 100;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm_LW2WrhdyPibhNjkVqF7_crqDvbggyV3rA&s');
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            padding: 50px;
+        }
+        .btn {
+            background-color: rgb(255, 191, 221);
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        .no-btn {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function moverBoton() {
+            let botonNo = document.getElementById("no-btn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            botonNo.style.position = "absolute";
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
+    </script>
+</head>
+<body>
+    <div class="hearts"> 
+    </div>
+    <div class="container">
+        <h1>¿Quieres ir al teatro conmigo? ❤️✨</h1>
+        <a href="/gracias"><button class="btn">Sí</button></a>
+        <button class="btn no-btn" id="no-btn" onmouseover="moverBoton()">No</button>
+    </div>
+</body>
+</html>
